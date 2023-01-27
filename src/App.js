@@ -29,14 +29,35 @@ const gamesListData = [
   },
 ]
 
+const channelListData = [
+  {  
+    url: "https://www.twitch.tv/cellbit",
+    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/516575-188x250.jpg",
+    alt: "Imagem de Cellbit",
+  },
+  
+  {
+    url: "https://www.twitch.tv/directory/game/League%20of%20Legends",
+    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/21779-188x250.jpg",
+    alt: "Imagem do jogo League of Legends",
+  },
+    
+  {   
+    url: "https://www.twitch.tv/directory/game/Teamfight%20Tactics",
+    imageUrl: "https://static-cdn.jtvnw.net/ttv-boxart/513143-188x250.jpg",
+    alt: "Imagem do jogo TFT",
+  },
+]
+
 function App() {
   return (
     <div className="App">
       <Header/>
       <main>
         <Section title="Meus jogos"
-          subtitle="Os games queeu mais curto de jogar!">
-
+          subtitle="Os games que eu mais curto de jogar!"
+          className="games-list"
+        >
         {
           gamesListData.map(function(item) {
             return(
@@ -48,12 +69,24 @@ function App() {
             )
           })
         }
-
-        
         </Section>
 
         <Section title="Canias e Streamers"
-        subtitle="Lista de canias e tramissões que eu não perco!"/>
+          subtitle="Lista de canias e tramissões que eu não perco!"
+          className="channel-list"
+        >
+
+          {
+            channelListData.map(function(item){
+              return (
+                <ListItem 
+                url={item.url}
+                imageUrl={item.imageUrl}
+                alt={item.alt}/>
+              )
+            })
+          }
+        </Section>
       </main>
 
     </div>
