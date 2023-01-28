@@ -16,6 +16,7 @@
 </p>
 
 ## :dart: About ##
+Projeto desenvolvido no evento Next Level Week (NLW) da Rocketseat e clonado para ReactJS
 
 ## :rocket: Technologies ##
 
