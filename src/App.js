@@ -49,6 +49,24 @@ const channelListData = [
   },
 ]
 
+const socialListData = [
+  {
+    url: "https://www.instagram.com/leandro_tchep/",
+    imageUrl: "/assets/instagram.svg",
+    alt: "Instagram do Leandro Chagas"
+  },
+  {
+    url: "https://www.youtube.com/watch?v=z3qP4Ikq8nk",
+    imageUrl: "/assets/youtube.svg",
+    alt: "Youtube do Leandro Chagas"
+  },
+  {
+    url: "https://www.linkedin.com/in/leandro-chagas-/",
+    imageUrl: "/assets/linkedin.svg",
+    alt: "Linkedin de Leandro Chagas"
+  }
+]
+
 function App() {
   return (
     <div className="App">
@@ -87,6 +105,22 @@ function App() {
             })
           }
         </Section>
+
+        <Section title="minhas redes"
+        subtitle="Se conecte comigo agora mesmo!"
+        className="socila-list">
+          {
+            socialListData.map(function(item){
+              return (
+                <ListItem 
+                  url={item.url}
+                  imageUrl={item.imageUrl}
+                  alt={item.alt}
+                />
+              )
+            })
+          }
+        </Section>  
       </main>
 
     </div>
